@@ -25,6 +25,8 @@ public class OpenRegDialog : MonoBehaviour
     
     public void OnClick()
     {
+        inputEmail.text = "";
+        inputLogin.text = "";
         inputEmail.placeholder.GetComponent<Text>().text = "ВВедите Email";
         inputLogin.placeholder.GetComponent<Text>().text = "ВВедите Логин";
         inputPassword.placeholder.GetComponent<Text>().text = "ВВедите пароль";
