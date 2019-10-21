@@ -7,8 +7,12 @@ public class Tobacco : MonoBehaviour
     private string _label;
     private int _strength;
     private string _category;
-    private string _flavor; 
-    
+    private string _flavor;
+
+    public Tobacco()
+    {
+    }
+
     public Tobacco(string label, int strength, string category, string flavor)
     {
         _label = label;
