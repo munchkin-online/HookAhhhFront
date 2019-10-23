@@ -9,6 +9,7 @@ public class PersonReg
 {
     public string username;
     public string password;
+    public string mail;
     public string role;
 }
 
@@ -16,7 +17,7 @@ public class Registration : MonoBehaviour
 {
     public InputField inputFieldEmail;
     public InputField inputFieldPassword;
-    
+    public InputField inputFieldUsername;
 
     public void OnClick()
     {
@@ -29,14 +30,15 @@ public class Registration : MonoBehaviour
 
             var person = new PersonReg
             {
-                username = inputFieldEmail.text,
+                username = inputFieldUsername.text,
                 password = inputFieldPassword.text,
+                mail = inputFieldEmail.text,
                 role = "guest"
             };
 
-            string jsonn = JsonUtility.ToJson(person);
+            string json = JsonUtility.ToJson(person);
 
-            streamWriter.Write(jsonn);
+            streamWriter.Write(json);
         }
 
         var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();

@@ -25,6 +25,7 @@ public class OpenRegDialog : MonoBehaviour
     
     public void OnClick()
     {
+        OnBackPrs._isBackPressed = true;
         inputEmail.text = "";
         inputLogin.text = "";
         inputEmail.placeholder.GetComponent<Text>().text = "ВВедите Email";
@@ -37,7 +38,7 @@ public class OpenRegDialog : MonoBehaviour
         buttonEnter.gameObject.SetActive(false);
         inputPasswordRepeat.gameObject.SetActive(true);
     }
-
+    
     // Start is called before the first frame update
     void Start()
     {
