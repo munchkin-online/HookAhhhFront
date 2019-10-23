@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -12,12 +15,19 @@ public class Person
     public string password;
 }
 
+public class RequestAnswer
+{
+    public string message;
+    public string role;
+}
+
 
 public class OpenGuest : MonoBehaviour
 {
 
     public InputField inputFieldEmail;
     public InputField inputFieldPassword;
+    private RequestAnswer _answer;
     
 
     public void OnClick()
@@ -39,12 +49,26 @@ public class OpenGuest : MonoBehaviour
 
             streamWriter.Write(jsonn);
         }
-
+        
         var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
         using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
         {
             var result = streamReader.ReadToEnd();
             print(result);
+            var answer = new RequestAnswer();
+            answer = JsonUtility.FromJson<RequestAnswer>(result);
+            print(answer.role);
+            if (answer != null)
+            {
+                if (answer.role == "guest")
+                {
+                    SceneManager.LoadScene(1);
+                }
+                else if (answer.role == "master")
+                {
+                    //TODO добавить переход в окно мастера, ПАТАМУ ЧТА ЕГО НЕ СДЕЛАЛИ
+                }
+            }
         }
     }
 }
