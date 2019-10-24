@@ -2115,6 +2115,7 @@ MonoBehaviour:
   inputFieldEmail: {fileID: 1532748386}
   inputFieldPassword: {fileID: 2042853454}
   inputFieldUsername: {fileID: 698080831}
+  onBackPressed: {fileID: 143017817}
 --- !u!4 &1685286597
 Transform:
   m_ObjectHideFlags: 0
