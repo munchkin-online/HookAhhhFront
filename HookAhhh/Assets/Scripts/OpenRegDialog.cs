@@ -25,7 +25,7 @@ public class OpenRegDialog : MonoBehaviour
     
     public void OnClick()
     {
-        OnBackPrs._isBackPressed = true;
+        OnBackPrs._isBackPressed = false;
         inputEmail.text = "";
         inputLogin.text = "";
         inputEmail.placeholder.GetComponent<Text>().text = "ВВедите Email";

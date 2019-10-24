@@ -58,16 +58,18 @@ public class OpenGuest : MonoBehaviour
             var answer = new RequestAnswer();
             answer = JsonUtility.FromJson<RequestAnswer>(result);
             print(answer.role);
-            if (answer != null)
+            
+            switch(answer.role)
             {
-                if (answer.role == "guest")
-                {
+                case "guest":
                     SceneManager.LoadScene(1);
-                }
-                else if (answer.role == "master")
-                {
+                    break;
+                case "master":
                     //TODO добавить переход в окно мастера, ПАТАМУ ЧТА ЕГО НЕ СДЕЛАЛИ
-                }
+                    break;
+                default:
+                    print("ERROR");
+                    break;
             }
         }
     }

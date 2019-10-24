@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class OnBackPrs : MonoBehaviour
 {
-    static public bool _isBackPressed = false;
+    static public bool _isBackPressed = true;
     
     public InputField inputEmail;
 
@@ -26,23 +26,30 @@ public class OnBackPrs : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+            print(_isBackPressed);
             if (_isBackPressed == true)
             {
-                Application.Quit();
                 _isBackPressed = false;
+                Application.Quit();
             }
             else if (_isBackPressed == false)
             {
-                _isBackPressed = true;
-                inputEmail.text = "";
-                inputPassword.text = "";
-                inputEmail.placeholder.GetComponent<Text>().text = "Логин или email";
-                inputPassword.placeholder.GetComponent<Text>().text = "Пароль";
-                buttonEnter.gameObject.SetActive(true);
-                nonUseInputField_1.gameObject.SetActive(false);
-                nonUseInputField_2.gameObject.SetActive(false);
-                nonUseButtonReg2.gameObject.SetActive(false);
+                ActiveEnterMenu();
             }
         }
+    }
+
+    public void ActiveEnterMenu()
+    {
+        _isBackPressed = true;
+        inputEmail.text = "";
+        inputPassword.text = "";
+        inputEmail.placeholder.GetComponent<Text>().text = "Логин или email";
+        inputPassword.placeholder.GetComponent<Text>().text = "Пароль";
+        buttonEnter.gameObject.SetActive(true);
+        buttonReg.gameObject.SetActive(true);
+        nonUseInputField_1.gameObject.SetActive(false);
+        nonUseInputField_2.gameObject.SetActive(false);
+        nonUseButtonReg2.gameObject.SetActive(false);
     }
 }

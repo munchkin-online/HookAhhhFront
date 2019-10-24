@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PersonReg
@@ -19,6 +21,7 @@ public class Registration : MonoBehaviour
     public InputField inputFieldPassword;
     public InputField inputFieldUsername;
 
+    public OnBackPrs onBackPressed;
     public void OnClick()
     {
         print("click");
@@ -46,6 +49,7 @@ public class Registration : MonoBehaviour
         {
             var result = streamReader.ReadToEnd();
             print(result);
+            onBackPressed.ActiveEnterMenu();
         }
     }
 }
