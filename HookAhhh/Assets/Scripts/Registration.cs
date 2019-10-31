@@ -25,7 +25,7 @@ public class Registration : MonoBehaviour
     public void OnClick()
     {
         print("click");
-        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahserver.herokuapp.com/registry");
+        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahserver.herokuapp.com/user/registry");
         httpWebRequest.ContentType = "";
         httpWebRequest.Method = "POST";
         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -35,8 +35,7 @@ public class Registration : MonoBehaviour
             {
                 username = inputFieldUsername.text,
                 password = inputFieldPassword.text,
-                mail = inputFieldEmail.text,
-                role = "guest"
+                mail = inputFieldEmail.text
             };
 
             string json = JsonUtility.ToJson(person);
