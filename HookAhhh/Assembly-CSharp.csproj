@@ -70,44 +70,47 @@
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
     <Compile Include="Assets\Scripts\Registration.cs" />
     <Compile Include="Assets\Scripts\RoundRectGraphic.cs" />
-    <Compile Include="Assets\Scripts\ScrollViewAdapter.cs" />
+    <Compile Include="Assets\Scripts\Serialaze\ExampleSerializer.cs" />
+    <Compile Include="Assets\Scripts\Serialaze\Serializer.cs" />
+    <Compile Include="Assets\Scripts\Serialaze\TobaccoState.cs" />
     <Compile Include="Assets\Scripts\Tobacco.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\Zabiv.cs" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\readme.txt" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\license.txt" />
+    <None Include="Assets\tobaccos.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/denis/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -627,7 +630,7 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

@@ -1,24 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
-public class Tobacco : MonoBehaviour
+[Serializable]
+[XmlType("Tobacco")]
+public class Tobacco
 {
-    private string _label;
-    private int _strength;
-    private string _category;
-    private string _flavor;
+    [XmlAttribute("Label")]
+    public string Label { get; set; }
+    [XmlAttribute("Strength")]
+    public int Strength { get; set; }
+    [XmlAttribute("Category")]
+    public string Category { get; set;  }
+    [XmlAttribute("Flavor")]
+    public string Flavor { get; set; }
 
-    public Tobacco()
-    {
-    }
+    public Tobacco() {}
 
     public Tobacco(string label, int strength, string category, string flavor)
     {
-        _label = label;
-        _strength = strength;
-        _category = category;
-        _flavor = flavor;
+        Label = label;
+        Strength = strength;
+        Category = category;
+        Flavor = flavor;
     }
     
     //Category: 
@@ -32,43 +38,4 @@ public class Tobacco : MonoBehaviour
 //    Цитрусовые - Citrus
 //    Ягодные - Berry
 
-    public string getLabel()
-    {
-        return _label;
-    }
-
-    public void setLabel(string label)
-    {
-        _label = label;
-    }
-    
-    public int getStrength()
-    {
-        return _strength;
-    }
-
-    public void setStrength(int strength)
-    {
-        _strength = strength;
-    }
-    
-    public string getCategory()
-    {
-        return _category;
-    }
-
-    public void setCategory(string category)
-    {
-        _category = category;
-    }
-    
-    public string getFlavor() 
-    {
-        return _flavor;
-    }
-
-    public void setFlavor(string flavor)
-    {
-        _flavor = flavor;
-    }
 }
