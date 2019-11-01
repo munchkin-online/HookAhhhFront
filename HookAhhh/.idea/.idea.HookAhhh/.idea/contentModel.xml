@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Aver\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Aver\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_HookAhhh.-507368411.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Aver\Documents\GitHub\HookAhhhFront\HookAhhh" t="IncludeRecursive">
+    <e p="C:\Users\denis\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\denis\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_HookAhhh.-2109826436.00" t="ExcludeRecursive" />
+    <e p="C:\Users\denis\Documents\GitHub\HookAhhhFront\HookAhhh" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CP" t="Include">
@@ -24,12 +24,15 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="EasyHookah.cs" t="Include" />
           <e p="InitScript.cs" t="Include" />
+          <e p="NewBehaviourScript.cs" t="Include" />
           <e p="OnBackPrs.cs" t="Include" />
           <e p="OpenGuest.cs" t="Include" />
           <e p="OpenRegDialog.cs" t="Include" />
           <e p="Registration.cs" t="Include" />
           <e p="RoundRectGraphic.cs" t="Include" />
+          <e p="ScrollViewAdapter.cs" t="Include" />
           <e p="Tobacco.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Zabiv.cs" t="Include" />
