@@ -30,6 +30,7 @@
           <e p="OpenRegDialog.cs" t="Include" />
           <e p="Registration.cs" t="Include" />
           <e p="RoundRectGraphic.cs" t="Include" />
+          <e p="ScrollViewAdapterMaster.cs" t="Include" />
           <e p="Tobacco.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Zabiv.cs" t="Include" />
