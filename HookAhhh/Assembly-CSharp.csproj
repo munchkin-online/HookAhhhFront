@@ -68,12 +68,19 @@
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
     <Compile Include="Assets\Scripts\Registration.cs" />
     <Compile Include="Assets\Scripts\RoundRectGraphic.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\ScrollViewAdapterMaster.cs" />
+=======
+    <Compile Include="Assets\Scripts\Serialaze\ExampleSerializer.cs" />
+    <Compile Include="Assets\Scripts\Serialaze\Serializer.cs" />
+    <Compile Include="Assets\Scripts\Serialaze\TobaccoState.cs" />
+>>>>>>> 771d5f3ca88cb46f9c99f521351e8a6f05143eee
     <Compile Include="Assets\Scripts\Tobacco.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\Zabiv.cs" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\readme.txt" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\license.txt" />
+    <None Include="Assets\tobaccos.xml" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
