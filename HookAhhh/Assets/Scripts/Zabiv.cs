@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Zabiv : MonoBehaviour
 {
+    private string _name;
     private Tobacco _flavour1 = new Tobacco();
     private Tobacco _flavour2 = new Tobacco();
     private Tobacco _flavour3 = new Tobacco();
@@ -21,4 +22,35 @@ public class Zabiv : MonoBehaviour
         else
             return 0;
     }
+    
+    
+    public Zabiv()
+    {}
+
+    public Zabiv(Tobacco flavour1)
+    {
+        _flavour1 = flavour1;
+        _name = flavour1.getFlavor();
+    }
+    
+    public Zabiv(Tobacco flavour1, Tobacco flavour2)
+    {
+        _flavour1 = flavour1;
+        _flavour2 = flavour2;
+        _name = flavour1.getFlavor() + "/" + flavour2.getFlavor();
+    }
+    
+    public Zabiv(Tobacco flavour1, Tobacco flavour2, Tobacco flavour3)
+    {
+        _flavour1 = flavour1;
+        _flavour2 = flavour2;
+        _flavour3 = flavour3;
+        _name = flavour1.getFlavor() + "/" + flavour2.getFlavor() + "/" + flavour3.getFlavor();
+    }
+
+    public string getName()
+    {
+        return _name;
+    }
+    
 }
