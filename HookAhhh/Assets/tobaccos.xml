@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<TabaccoState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Tobaccos>
+    <TobaccosItem Label="g" Strength="1" Category="f" Flavor="f" />
+  </Tobaccos>
+</TabaccoState>

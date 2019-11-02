@@ -13,11 +13,11 @@ public class Zabiv : MonoBehaviour
     public int getStrength()
     { 
         if (_numofflavours == 3)
-            return (_flavour1.getStrength() + _flavour2.getStrength() + _flavour3.getStrength()) / 3;
+            return (_flavour1.Strength + _flavour2.Strength + _flavour3.Strength) / 3;
         else if (_numofflavours == 2)
-            return (_flavour1.getStrength() + _flavour2.getStrength()) / 2;
+            return (_flavour1.Strength + _flavour2.Strength) / 2;
         else if (_numofflavours == 1)
-            return _flavour1.getStrength();
+            return _flavour1.Strength;
         else
             return 0;
     }
