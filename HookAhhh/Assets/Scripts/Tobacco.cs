@@ -27,6 +27,11 @@ public class Tobacco
         Flavor = flavor;
     }
     
+    public string getFlavor()
+    {
+        return Flavor;
+    }
+    
     //Category: 
 //    Миксы - Mixes
 //    Мятные - Mint
