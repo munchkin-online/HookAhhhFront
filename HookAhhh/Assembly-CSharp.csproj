@@ -62,17 +62,19 @@
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\ColorizeText.cs" />
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\ColorizeTextInChildren.cs" />
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\Demo.cs" />
-    <Compile Include="Assets\Scripts\EasyHookah.cs" />
     <Compile Include="Assets\Scripts\InitScript.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\OnBackPrs.cs" />
     <Compile Include="Assets\Scripts\OpenGuest.cs" />
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
     <Compile Include="Assets\Scripts\Registration.cs" />
     <Compile Include="Assets\Scripts\RoundRectGraphic.cs" />
+<<<<<<< HEAD
+    <Compile Include="Assets\Scripts\ScrollViewAdapterMaster.cs" />
+=======
     <Compile Include="Assets\Scripts\Serialaze\ExampleSerializer.cs" />
     <Compile Include="Assets\Scripts\Serialaze\Serializer.cs" />
     <Compile Include="Assets\Scripts\Serialaze\TobaccoState.cs" />
+>>>>>>> 771d5f3ca88cb46f9c99f521351e8a6f05143eee
     <Compile Include="Assets\Scripts\Tobacco.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\Zabiv.cs" />
@@ -630,7 +632,7 @@
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
