@@ -1,5 +1,9 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/ViewOrderWindow.unity
+=======
+- path: Assets/Scenes/TestScene.unity
+>>>>>>> 771d5f3ca88cb46f9c99f521351e8a6f05143eee
   isLoaded: 1
   isActive: 1
   isSubScene: 0
