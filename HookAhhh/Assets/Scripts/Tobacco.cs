@@ -14,27 +14,27 @@ public class Tobacco
     public int Strength { get; set; }
     [XmlAttribute("Category")]
     public string Category { get; set;  }
-    [XmlAttribute("Flavor")]
-    public string Flavor { get; set; }
+    [XmlAttribute("Flavour")]
+    public string Flavour { get; set; }
 
     public Tobacco() {}
 
-    public Tobacco(string label, int strength, string category, string flavor)
+    public Tobacco(string label, int strength, string category, string flavour)
     {
         Label = label;
         Strength = strength;
         Category = category;
-        Flavor = flavor;
+        Flavour = flavour;
     }
     
-    public string getFlavor()
+    public string getFlavour()
     {
-        return Flavor;
+        return Flavour;
     }
     
     //Category: 
 //    Миксы - Mixes
-//    Мятные - Mint
+//    Свежие - Fresh
 //    Напитки - Drinks
 //    Пряные - Spicy
 //    Сладости - Sweets
@@ -42,5 +42,6 @@ public class Tobacco
 //    Цветочно-травяные - Floral-herbal
 //    Цитрусовые - Citrus
 //    Ягодные - Berry
+//    Другие - Others
 
 }
