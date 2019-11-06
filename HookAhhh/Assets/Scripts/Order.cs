@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    private int _cost = 0;
+    private int cost = 0;
+    private string guestName;
+    private string comments;
     ArrayList order = new ArrayList();
 
-    public void addElementToOrder(Zabiv zabiv)
+    public void addElementToOrder(Zabiv zabiv, string comments)
     {
+        this.comments = comments;
         order.Add(zabiv);
-        _cost += 1200;
+        cost += 1200;
     }
 
     public void removeElementFromOrder(int id)
@@ -18,13 +21,28 @@ public class Order : MonoBehaviour
         order.Remove(id);
     }
 
+    public string getComments()
+    {
+        return comments;
+    }
+
+    public string getGuestName()
+    {
+        return guestName;
+    }
+
+    public void setGuestName(string guestName)
+    {
+        this.guestName = guestName;
+    }
+
     public int getCost()
     {
-        return _cost;
+        return cost;
     }
 
     public void setCost(int cost)
     {
-        _cost = cost;
+        this.cost = cost;
     }
 }
