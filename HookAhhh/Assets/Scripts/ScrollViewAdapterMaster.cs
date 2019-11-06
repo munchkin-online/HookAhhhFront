@@ -10,7 +10,77 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     public RectTransform prefab;
     public RectTransform content;
     public int countModel = 0;
-    private RectTransform rect;
+    private RectTransform rectTransform;
+    
+    
+    private Vector3 fp;   //Первая позиция касания
+    private Vector3 lp;   //Последняя позиция касания
+    private float dragDistance;  //Минимальная дистанция для определения свайпа
+    private List<Vector3> touchPositions = new List<Vector3>(); //Храним все позиции касания в списке
+    
+    void Start(){
+        dragDistance = Screen.height*20/100; //dragDistance это 20% высоты экрана
+    }
+    
+    void Update(){
+        foreach (Touch touch in Input.touches)  //используем цикл для отслеживания больше одного свайпа
+        {//должны быть закоментированы, если вы используете списки 
+            /*if (touch.phase == TouchPhase.Began) //проверяем первое касание
+            {
+                fp = touch.position;
+                lp = touch.position;
+         
+            }*/
+            
+         
+            if (touch.phase == TouchPhase.Moved) //добавляем касания в список, как только они определены
+            {
+                touchPositions.Add(touch.position);
+            }
+         
+            if (touch.phase == TouchPhase.Ended && touchPositions.Count > 1) //проверяем, если палец убирается с экрана
+            {
+                //lp = touch.position;  //последняя позиция касания. закоментируйте если используете списки
+                fp =  touchPositions[0]; //получаем первую позицию касания из списка касаний
+                lp =  touchPositions[touchPositions.Count-1]; //позиция последнего касания
+                //Debug.Log(fp + " " + lp);
+         
+                //проверяем дистанцию перемещения больше чем 20% высоты экрана
+                if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance)
+                {//это перемещение
+                      //проверяем, перемещение было вертикальным или горизонтальным 
+                      if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
+                      {   //Если горизонтальное движение больше, чем вертикальное движение ...
+                          if ((lp.x>fp.x))  //Если движение было вправо
+                          {   //Свайп вправо
+                              Debug.Log("Right Swipe");
+                          }
+                          else
+                          {   //Свайп влево
+                              Debug.Log("Left Swipe"); 
+                          }
+                      }
+                    else
+                    {   //Если вертикальное движение больше, чнм горизонтальное движение
+                         if (lp.y>fp.y)  //Если движение вверх
+                         {   //Свайп вверх
+                             Debug.Log("Up Swipe"); 
+                         }
+                         else
+                         {   //Свайп вниз
+                             Debug.Log("Down Swipe");
+                             UpdateItems();
+                         }
+                    }
+                } 
+                touchPositions.Clear();
+            }
+            else
+            {   //Это ответвление, как расстояние перемещения составляет менее 20% от высоты экрана
+         
+            }
+       }
+    }
     
     public class ZabivMasterModel
     {
@@ -81,6 +151,12 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         
         SetSize(trans, new Vector2(trans.rect.size.x, newSize));
     }
+    
+    public static void AddHeight(RectTransform trans, float newSize) {
+        
+        SetSize(trans, new Vector2(trans.rect.size.x, trans.rect.size.y + newSize));
+    }
+    
 
     void InitializeItemView(GameObject viewGameObject, ZabivMasterModel model)
     {
@@ -94,10 +170,15 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         view.label2Text.text = model.label2;
         view.label3Text.text = model.label3;
         view.commentsText.text = model.comments;
-        rect = viewGameObject.transform.Find("Comments/Text comments").GetComponent<RectTransform>();
-        /*float textWidth = LayoutUtility.GetPreferredHeight(view.commentsText.rectTransform);
-        float parentWidth = rect.rect.height;
-        print(textWidth + " " + parentWidth);*/
+        rectTransform = viewGameObject.transform.Find("Comments/Text comments").GetComponent<RectTransform>();
+        float textWidth = LayoutUtility.GetPreferredHeight(view.commentsText.rectTransform);
+        float parentWidth = rectTransform.rect.height;
+        if (textWidth >= parentWidth)
+        {
+            float differance = textWidth - parentWidth;
+            AddHeight(viewGameObject.transform.GetComponent<RectTransform>(), differance); 
+            AddHeight(viewGameObject.transform.Find("Comments").GetComponent<RectTransform>(), differance);
+        }
         
     }
     
