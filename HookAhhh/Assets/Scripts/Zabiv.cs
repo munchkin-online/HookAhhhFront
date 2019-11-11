@@ -14,11 +14,11 @@ public class Zabiv : MonoBehaviour
     public int getStrength()
     { 
         if (_numofflavours == 3)
-            return (_flavour1.Strength + _flavour2.Strength + _flavour3.Strength) / 3;
+            return (_flavour1.strength + _flavour2.strength + _flavour3.strength) / 3;
         else if (_numofflavours == 2)
-            return (_flavour1.Strength + _flavour2.Strength) / 2;
+            return (_flavour1.strength + _flavour2.strength) / 2;
         else if (_numofflavours == 1)
-            return _flavour1.Strength;
+            return _flavour1.strength;
         else
             return 0;
     }
@@ -29,7 +29,7 @@ public class Zabiv : MonoBehaviour
     public Zabiv(Tobacco flavour1)
     {
         _flavour1 = flavour1;
-        _name = flavour1.getFlavor();
+        _name = flavour1.flavour;
         _numofflavours = 1;
     }
     
@@ -37,7 +37,7 @@ public class Zabiv : MonoBehaviour
     {
         _flavour1 = flavour1;
         _flavour2 = flavour2;
-        _name = flavour1.getFlavor() + "/" + flavour2.getFlavor();
+        _name = flavour1.flavour + "/" + flavour2.flavour;
         _numofflavours = 2;
     }
     
@@ -46,7 +46,7 @@ public class Zabiv : MonoBehaviour
         _flavour1 = flavour1;
         _flavour2 = flavour2;
         _flavour3 = flavour3;
-        _name = flavour1.getFlavor() + "/" + flavour2.getFlavor() + "/" + flavour3.getFlavor();
+        _name = flavour1.flavour + "/" + flavour2.flavour + "/" + flavour3.flavour;
         _numofflavours = 3;
     }
 
