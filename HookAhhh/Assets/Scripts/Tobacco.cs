@@ -9,10 +9,6 @@ using UnityEngine;
 public class Tobacco
 {
     [SerializeField] 
-    [XmlAttribute("Id")] 
-    public string Id;
-
-    [SerializeField] 
     [XmlAttribute("label")]
     public string label;
 

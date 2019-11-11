@@ -28,14 +28,6 @@ public class CreateTobaccoListAfterInit1 : MonoBehaviour
             result = "{\"tobaccos\":" + result + "}";
             print(result);
             var answer = Wrapper.CreateFromJSON(result).tobaccos;
-            /*foreach(var variable in answer)
-            {
-                print(variable.Id);
-                print(variable.label);
-                print(variable.strength);
-                print(variable.category);
-                print(variable.flavour);
-            }*/
             var state = new TobaccoState {tobaccos = answer};
             Serializer.SaveXml(state, Serializer.FileName);
         }
