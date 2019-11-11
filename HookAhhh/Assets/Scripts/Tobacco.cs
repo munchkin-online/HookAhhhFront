@@ -8,28 +8,35 @@ using UnityEngine;
 [XmlType("Tobacco")]
 public class Tobacco
 {
-    [XmlAttribute("Label")]
-    public string Label { get; set; }
-    [XmlAttribute("Strength")]
-    public int Strength { get; set; }
-    [XmlAttribute("Category")]
-    public string Category { get; set;  }
-    [XmlAttribute("Flavour")]
-    public string Flavour { get; set; }
+    [SerializeField] 
+    [XmlAttribute("label")]
+    public string label;
+
+    [SerializeField] 
+    [XmlAttribute("strength")]
+    public int strength;
+
+    [SerializeField] 
+    [XmlAttribute("category")]
+    public string category;
+
+    [SerializeField] 
+    [XmlAttribute("flavour")]
+    public string flavour;
 
     public Tobacco() {}
 
     public Tobacco(string label, int strength, string category, string flavour)
     {
-        Label = label;
-        Strength = strength;
-        Category = category;
-        Flavour = flavour;
+        this.label = label;
+        this.strength = strength;
+        this.category = category;
+        this.flavour = flavour;
     }
     
     public string getFlavour()
     {
-        return Flavour;
+        return flavour;
     }
     
     //Category: 

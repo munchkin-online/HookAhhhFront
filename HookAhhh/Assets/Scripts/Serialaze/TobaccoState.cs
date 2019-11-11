@@ -9,8 +9,8 @@ using UnityEngine;
 [XmlInclude(typeof(Tobacco))]
 public class TobaccoState
 {
-    [XmlArray("Tobaccos")]
-    [XmlArrayItem("TobaccosItem")]
+    [XmlArray("tobaccos")]
+    [XmlArrayItem("tobaccosItem")]
     public List<Tobacco> tobaccos = new List<Tobacco>();
 
     public TobaccoState()
