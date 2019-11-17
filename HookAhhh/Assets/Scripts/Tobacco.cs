@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 [XmlType("Tobacco")]
 public class Tobacco
 {
+    [SerializeField] 
+    [XmlAttribute("Id")]
+    public int Id;
+    
     [SerializeField] 
     [XmlAttribute("label")]
     public string label;
@@ -19,7 +24,7 @@ public class Tobacco
     [SerializeField] 
     [XmlAttribute("category")]
     public string category;
-
+    
     [SerializeField] 
     [XmlAttribute("flavour")]
     public string flavour;
@@ -37,6 +42,11 @@ public class Tobacco
     public string getFlavour()
     {
         return flavour;
+    }
+
+    public int getStrength()
+    {
+        return strength;
     }
     
     //Category: 

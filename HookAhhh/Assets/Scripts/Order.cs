@@ -1,13 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Order : MonoBehaviour
+[Serializable]
+public class Order
 {
-    private int cost = 0;
-    private string guestName;
-    private string comments;
-    ArrayList order = new ArrayList();
+    [SerializeField]
+    public List<Zabiv> order;
+
+    [SerializeField]
+    public int cost = 0;
+
+    [SerializeField]
+    public string guestName;
+
+    [SerializeField]
+    public string comments;
+    
+    public Order()
+    {
+        order = new List<Zabiv>();
+    }
 
     public void addElementToOrder(Zabiv zabiv, string comments)
     {
@@ -16,9 +29,9 @@ public class Order : MonoBehaviour
         cost += 1200;
     }
 
-    public void removeElementFromOrder(int id)
+    public void removeElementFromOrder(Zabiv zabiv)
     {
-        order.Remove(id);
+        order.Remove(zabiv);
     }
 
     public string getComments()
@@ -44,5 +57,15 @@ public class Order : MonoBehaviour
     public void setCost(int cost)
     {
         this.cost = cost;
+    }
+
+    public int getCountZabiv()
+    {
+        return order.Count;
+    }
+
+    public Zabiv getZabiv(int number)
+    {
+        return order[number];
     }
 }
