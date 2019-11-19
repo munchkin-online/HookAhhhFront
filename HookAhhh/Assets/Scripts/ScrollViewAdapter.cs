@@ -13,6 +13,7 @@ public class ScrollViewAdapter : MonoBehaviour
 
     public void Start()
     {
+        eh.initList();
         eh.CreateZabiv();
         int modelsCount = eh.getSize();
         //int.TryParse(countText.text, out modelsCount);
