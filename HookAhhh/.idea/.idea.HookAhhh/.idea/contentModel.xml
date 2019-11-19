@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\MyProgram\GitHub\HookAhhhFront\HookAhhh" t="IncludeRecursive">
+    <e p="C:\Users\denis\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\denis\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_HookAhhh.-2109826436.00" t="ExcludeRecursive" />
+    <e p="C:\Users\denis\Documents\GitHub\HookAhhhFront\HookAhhh" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CP" t="Include">
@@ -22,21 +24,25 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Blocked.cs" t="Include" />
+          <e p="CreateTobaccoListAfterInit1.cs" t="Include" />
+          <e p="EasyHookah.cs" t="Include" />
           <e p="InitScript.cs" t="Include" />
+          <e p="MasterGoToBlocking.cs" t="Include" />
+          <e p="MasterGoToOrders.cs" t="Include" />
           <e p="OnBackPrs.cs" t="Include" />
           <e p="OpenGuest.cs" t="Include" />
           <e p="OpenRegDialog.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
           <e p="Registration.cs" t="Include" />
           <e p="RoundRectGraphic.cs" t="Include" />
-<<<<<<< HEAD
+          <e p="ScrollViewAdapter.cs" t="Include" />
           <e p="ScrollViewAdapterMaster.cs" t="Include" />
-=======
           <e p="Serialaze" t="Include">
             <e p="ExampleSerializer.cs" t="Include" />
             <e p="Serializer.cs" t="Include" />
             <e p="TobaccoState.cs" t="Include" />
           </e>
->>>>>>> 771d5f3ca88cb46f9c99f521351e8a6f05143eee
           <e p="Tobacco.cs" t="Include" />
           <e p="User.cs" t="Include" />
           <e p="Zabiv.cs" t="Include" />
@@ -44,14 +50,9 @@
         <e p="tobaccos.xml" t="Include" />
       </e>
       <e p="HookAhhh.sln" t="IncludeFlat" />
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
-      <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Ilya\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Ilya\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_HookAhhh.778061251.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -1,6 +1,356 @@
 <?xml version="1.0"?>
 <TabaccoState xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <Tobaccos>
-    <TobaccosItem Label="g" Strength="1" Category="f" Flavor="f" />
-  </Tobaccos>
+  <tobaccos>
+    <tobaccosItem Id="3" label="SERBETLI" strength="3" category="Citrus" />
+    <tobaccosItem Id="4" label="SERBETLI" strength="3" category="Fresh" />
+    <tobaccosItem Id="5" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="7" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="10" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="24" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="30" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="31" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="34" label="SERBETLI" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="36" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="37" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="42" label="SERBETLI" strength="3" category="Citrus" />
+    <tobaccosItem Id="44" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="51" label="SERBETLI" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="55" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="57" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="63" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="64" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="65" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="67" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="70" label="SERBETLI" strength="3" category="Fresh" />
+    <tobaccosItem Id="71" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="73" label="SERBETLI" strength="3" category="Spicy" />
+    <tobaccosItem Id="74" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="76" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="77" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="79" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="80" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="81" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="83" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="84" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="85" label="ADALYA" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="86" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="87" label="ADALYA" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="89" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="90" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="91" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="92" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="94" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="95" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="96" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="97" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="98" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="99" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="100" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="104" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="106" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="107" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="108" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="109" label="ADALYA" strength="3" category="Spicy" />
+    <tobaccosItem Id="112" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="113" label="ADALYA" strength="3" category="Citrus" />
+    <tobaccosItem Id="115" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="116" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="103" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="52" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="114" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="110" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="105" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="111" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="117" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="118" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="119" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="120" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="121" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="122" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="123" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="124" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="125" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="126" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="128" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="130" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="131" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="132" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="133" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="134" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="135" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="136" label="ADALYA" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="137" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="138" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="139" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="142" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="143" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="144" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="147" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="148" label="ADALYA" strength="3" category="Fresh" />
+    <tobaccosItem Id="149" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="150" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="152" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="154" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="159" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="161" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="162" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="163" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="164" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="165" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="166" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="167" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="168" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="170" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="171" label="Al FAKHER" strength="5" category="Drinks" />
+    <tobaccosItem Id="173" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="174" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="175" label="Al FAKHER" strength="5" category="Berry" />
+    <tobaccosItem Id="176" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="178" label="Al FAKHER" strength="5" category="Mixes" />
+    <tobaccosItem Id="179" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="180" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="181" label="Al FAKHER" strength="5" category="Citrus" />
+    <tobaccosItem Id="182" label="Al FAKHER" strength="5" category="Mixes" />
+    <tobaccosItem Id="183" label="Al FAKHER" strength="5" category="Drinks" />
+    <tobaccosItem Id="185" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="186" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="187" label="Al FAKHER" strength="5" category="Citrus" />
+    <tobaccosItem Id="188" label="Al FAKHER" strength="5" category="Drinks" />
+    <tobaccosItem Id="189" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="190" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="191" label="Al FAKHER" strength="5" category="Citrus" />
+    <tobaccosItem Id="192" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="193" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="194" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="195" label="Al FAKHER" strength="5" category="Berry" />
+    <tobaccosItem Id="196" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="197" label="Al FAKHER" strength="5" category="Fresh" />
+    <tobaccosItem Id="198" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="199" label="Al FAKHER" strength="5" category="Citrus" />
+    <tobaccosItem Id="200" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="201" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="202" label="Al FAKHER" strength="5" category="Sweets" />
+    <tobaccosItem Id="203" label="Al FAKHER" strength="5" category="Drinks" />
+    <tobaccosItem Id="204" label="FUMARI" strength="3" category="Mixes" />
+    <tobaccosItem Id="205" label="FUMARI" strength="3" category="Sweets" />
+    <tobaccosItem Id="206" label="FUMARI" strength="3" category="Drinks" />
+    <tobaccosItem Id="207" label="FUMARI" strength="3" category="Fruit" />
+    <tobaccosItem Id="208" label="FUMARI" strength="3" category="Fruit" />
+    <tobaccosItem Id="209" label="FUMARI" strength="3" category="Citrus" />
+    <tobaccosItem Id="210" label="FUMARI" strength="3" category="Fresh" />
+    <tobaccosItem Id="211" label="FUMARI" strength="3" category="Drinks" />
+    <tobaccosItem Id="212" label="FUMARI" strength="3" category="Citrus" />
+    <tobaccosItem Id="213" label="FUMARI" strength="3" category="Floral-herbal" />
+    <tobaccosItem Id="214" label="FUMARI" strength="3" category="Sweets" />
+    <tobaccosItem Id="215" label="FUMARI" strength="3" category="Sweets" />
+    <tobaccosItem Id="216" label="FUMARI" strength="3" category="Spicy" />
+    <tobaccosItem Id="217" label="FUMARI" strength="3" category="Citrus" />
+    <tobaccosItem Id="218" label="FUMARI" strength="3" category="Sweets" />
+    <tobaccosItem Id="219" label="FUMARI" strength="3" category="Sweets" />
+    <tobaccosItem Id="220" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="221" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="222" label="DARKSIDE" strength="7" category="Mixes" />
+    <tobaccosItem Id="223" label="DARKSIDE" strength="7" category="Mixes" />
+    <tobaccosItem Id="224" label="DARKSIDE" strength="7" category="Citrus" />
+    <tobaccosItem Id="225" label="DARKSIDE" strength="7" category="Citrus" />
+    <tobaccosItem Id="226" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="227" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="228" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="229" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="230" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="231" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="232" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="233" label="DARKSIDE" strength="7" category="Drinks" />
+    <tobaccosItem Id="234" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="235" label="DARKSIDE" strength="7" category="Mixes" />
+    <tobaccosItem Id="236" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="184" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="172" label="Al FAKHER" strength="5" category="Berry" />
+    <tobaccosItem Id="177" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="169" label="Al FAKHER" strength="5" category="Fruit" />
+    <tobaccosItem Id="237" label="DARKSIDE" strength="7" category="Fresh" />
+    <tobaccosItem Id="238" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="239" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="240" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="241" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="242" label="DARKSIDE" strength="7" category="Sweets" />
+    <tobaccosItem Id="243" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="244" label="DARKSIDE" strength="7" category="Fresh" />
+    <tobaccosItem Id="245" label="DARKSIDE" strength="7" category="Citrus" />
+    <tobaccosItem Id="246" label="DARKSIDE" strength="7" category="Citrus" />
+    <tobaccosItem Id="247" label="DARKSIDE" strength="7" category="Citrus" />
+    <tobaccosItem Id="248" label="DARKSIDE" strength="7" category="Drinks" />
+    <tobaccosItem Id="249" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="250" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="251" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="252" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="253" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="254" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="255" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="256" label="DARKSIDE" strength="7" category="Drinks" />
+    <tobaccosItem Id="257" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="258" label="DARKSIDE" strength="7" category="Floral-herbal" />
+    <tobaccosItem Id="259" label="DARKSIDE" strength="7" category="Drinks" />
+    <tobaccosItem Id="260" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="261" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="262" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="263" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="264" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="265" label="DARKSIDE" strength="7" category="Spicy" />
+    <tobaccosItem Id="266" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="267" label="DARKSIDE" strength="7" category="Fresh" />
+    <tobaccosItem Id="268" label="DARKSIDE" strength="7" category="Fresh" />
+    <tobaccosItem Id="269" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="270" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="271" label="DARKSIDE" strength="7" category="Fruit" />
+    <tobaccosItem Id="272" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="273" label="DARKSIDE" strength="7" category="Berry" />
+    <tobaccosItem Id="274" label="MUST HAVE" strength="6" category="Berry" />
+    <tobaccosItem Id="275" label="MUST HAVE" strength="6" category="Mixes" />
+    <tobaccosItem Id="276" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="277" label="MUST HAVE" strength="6" category="Berry" />
+    <tobaccosItem Id="278" label="MUST HAVE" strength="6" category="Berry" />
+    <tobaccosItem Id="279" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="280" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="281" label="MUST HAVE" strength="6" category="Berry" />
+    <tobaccosItem Id="282" label="MUST HAVE" strength="6" category="Sweets" />
+    <tobaccosItem Id="283" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="284" label="MUST HAVE" strength="6" category="Fresh" />
+    <tobaccosItem Id="285" label="MUST HAVE" strength="6" category="Fresh" />
+    <tobaccosItem Id="286" label="MUST HAVE" strength="6" category="Drinks" />
+    <tobaccosItem Id="287" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="288" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="289" label="MUST HAVE" strength="6" category="Fruit" />
+    <tobaccosItem Id="290" label="MUST HAVE" strength="6" category="Citrus" />
+    <tobaccosItem Id="291" label="MUST HAVE" strength="6" category="Sweets" />
+    <tobaccosItem Id="292" label="MUST HAVE" strength="6" category="Fresh" />
+    <tobaccosItem Id="293" label="MUST HAVE" strength="6" category="Spicy" />
+    <tobaccosItem Id="294" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="295" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="296" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="297" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="298" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="299" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="300" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="301" label="JUST SMOKE" strength="6" category="Floral-herbal" />
+    <tobaccosItem Id="302" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="303" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="304" label="JUST SMOKE" strength="6" category="Others" />
+    <tobaccosItem Id="305" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="306" label="JUST SMOKE" strength="6" category="Others" />
+    <tobaccosItem Id="307" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="308" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="309" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="310" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="311" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="312" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="313" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="314" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="315" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="316" label="JUST SMOKE" strength="6" category="Mixes" />
+    <tobaccosItem Id="317" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="318" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="319" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="320" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="321" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="322" label="JUST SMOKE" strength="6" category="Mixes" />
+    <tobaccosItem Id="323" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="324" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="325" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="326" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="327" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="328" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="329" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="330" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="331" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="332" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="333" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="334" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="335" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="336" label="JUST SMOKE" strength="6" category="Spicy" />
+    <tobaccosItem Id="337" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="338" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="339" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="340" label="JUST SMOKE" strength="6" category="Mixes" />
+    <tobaccosItem Id="341" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="342" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="343" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="344" label="JUST SMOKE" strength="6" category="Fresh" />
+    <tobaccosItem Id="345" label="JUST SMOKE" strength="6" category="Citrus" />
+    <tobaccosItem Id="346" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="347" label="JUST SMOKE" strength="6" category="Fruit" />
+    <tobaccosItem Id="348" label="JUST SMOKE" strength="6" category="Berry" />
+    <tobaccosItem Id="349" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="350" label="JUST SMOKE" strength="6" category="Spicy" />
+    <tobaccosItem Id="351" label="JUST SMOKE" strength="6" category="Mixes" />
+    <tobaccosItem Id="352" label="JUST SMOKE" strength="6" category="Drinks" />
+    <tobaccosItem Id="353" label="JUST SMOKE" strength="6" category="Sweets" />
+    <tobaccosItem Id="25" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="19" label="SERBETLI" strength="3" category="Citrus" />
+    <tobaccosItem Id="39" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="101" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="27" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="38" label="SERBETLI" strength="3" category="Fresh" />
+    <tobaccosItem Id="11" label="SERBETLI" strength="3" category="Berry" />
+    <tobaccosItem Id="56" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="49" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="102" label="ADALYA" strength="3" category="Citrus" />
+    <tobaccosItem Id="93" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="22" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="75" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="68" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="47" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="12" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="69" label="SERBETLI" strength="3" category="Fresh" />
+    <tobaccosItem Id="66" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="78" label="ADALYA" strength="3" category="Citrus" />
+    <tobaccosItem Id="54" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="32" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="6" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="60" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="58" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="13" label="SERBETLI" strength="3" category="Berry" />
+    <tobaccosItem Id="43" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="72" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="33" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="17" label="SERBETLI" strength="3" category="Citrus" />
+    <tobaccosItem Id="48" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="14" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="62" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="15" label="SERBETLI" strength="3" category="Citrus" />
+    <tobaccosItem Id="21" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="88" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="23" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="29" label="SERBETLI" strength="3" category="Drinks" />
+    <tobaccosItem Id="50" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="16" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="45" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="9" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="28" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="41" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="82" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="20" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="8" label="SERBETLI" strength="3" category="Fruit" />
+    <tobaccosItem Id="53" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="35" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="26" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="61" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="46" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="59" label="SERBETLI" strength="3" category="Sweets" />
+    <tobaccosItem Id="40" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="18" label="SERBETLI" strength="3" category="Mixes" />
+    <tobaccosItem Id="155" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="145" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="141" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="158" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="140" label="ADALYA" strength="3" category="Fruit" />
+    <tobaccosItem Id="153" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="160" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="151" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="157" label="ADALYA" strength="3" category="Berry" />
+    <tobaccosItem Id="146" label="ADALYA" strength="3" category="Mixes" />
+    <tobaccosItem Id="129" label="ADALYA" strength="3" category="Sweets" />
+    <tobaccosItem Id="127" label="ADALYA" strength="3" category="Drinks" />
+    <tobaccosItem Id="156" label="ADALYA" strength="3" category="Fruit" />
+  </tobaccos>
 </TabaccoState>

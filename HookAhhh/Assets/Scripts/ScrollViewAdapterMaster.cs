@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Net;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +12,77 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     public RectTransform prefab;
     public RectTransform content;
     public int countModel = 0;
-    private RectTransform rect;
+    private RectTransform rectTransform;
+    
+    
+    private Vector3 fp;   //Первая позиция касания
+    private Vector3 lp;   //Последняя позиция касания
+    private float dragDistance;  //Минимальная дистанция для определения свайпа
+    private List<Vector3> touchPositions = new List<Vector3>(); //Храним все позиции касания в списке
+    
+    void Start(){
+        dragDistance = Screen.height*20/100; //dragDistance это 20% высоты экрана
+    }
+    
+    void Update(){
+        foreach (Touch touch in Input.touches)  //используем цикл для отслеживания больше одного свайпа
+        {//должны быть закоментированы, если вы используете списки 
+            /*if (touch.phase == TouchPhase.Began) //проверяем первое касание
+            {
+                fp = touch.position;
+                lp = touch.position;
+         
+            }*/
+            
+         
+            if (touch.phase == TouchPhase.Moved) //добавляем касания в список, как только они определены
+            {
+                touchPositions.Add(touch.position);
+            }
+         
+            if (touch.phase == TouchPhase.Ended && touchPositions.Count > 1) //проверяем, если палец убирается с экрана
+            {
+                //lp = touch.position;  //последняя позиция касания. закоментируйте если используете списки
+                fp =  touchPositions[0]; //получаем первую позицию касания из списка касаний
+                lp =  touchPositions[touchPositions.Count-1]; //позиция последнего касания
+                //Debug.Log(fp + " " + lp);
+         
+                //проверяем дистанцию перемещения больше чем 20% высоты экрана
+                if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance)
+                {//это перемещение
+                      //проверяем, перемещение было вертикальным или горизонтальным 
+                      if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y))
+                      {   //Если горизонтальное движение больше, чем вертикальное движение ...
+                          if ((lp.x>fp.x))  //Если движение было вправо
+                          {   //Свайп вправо
+                              Debug.Log("Right Swipe");
+                          }
+                          else
+                          {   //Свайп влево
+                              Debug.Log("Left Swipe"); 
+                          }
+                      }
+                    else
+                    {   //Если вертикальное движение больше, чнм горизонтальное движение
+                         if (lp.y>fp.y)  //Если движение вверх
+                         {   //Свайп вверх
+                             Debug.Log("Up Swipe"); 
+                         }
+                         else
+                         {   //Свайп вниз
+                             Debug.Log("Down Swipe");
+                             UpdateItems();
+                         }
+                    }
+                } 
+                touchPositions.Clear();
+            }
+            else
+            {   //Это ответвление, как расстояние перемещения составляет менее 20% от высоты экрана
+         
+            }
+       }
+    }
     
     public class ZabivMasterModel
     {
@@ -18,9 +90,9 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         public string strength1;
         public string strength2;
         public string strength3;
-        public string label1;
-        public string label2;
-        public string label3;
+        public string flavour1;
+        public string flavour2;
+        public string flavour3;
         public string comments;
     }
     
@@ -30,9 +102,9 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         public Text strength1Text;
         public Text strength2Text;
         public Text strength3Text;
-        public Text label1Text;
-        public Text label2Text;
-        public Text label3Text;
+        public Text flavourl1Text;
+        public Text flavour2Text;
+        public Text flavour3Text;
         public Text commentsText;
 
         
@@ -43,17 +115,43 @@ public class ScrollViewAdapterMaster : MonoBehaviour
             strength1Text = rootView.Find("Tabacco 1/Text percent").GetComponent<Text>();
             strength2Text = rootView.Find("Tabacco 2/Text percent").GetComponent<Text>();
             strength3Text = rootView.Find("Tabacco 3/Text percent").GetComponent<Text>();
-            label1Text = rootView.Find("Tabacco 1/Text tabacco").GetComponent<Text>();
-            label2Text = rootView.Find("Tabacco 2/Text tabacco").GetComponent<Text>();
-            label3Text = rootView.Find("Tabacco 3/Text tabacco").GetComponent<Text>();
+            flavourl1Text = rootView.Find("Tabacco 1/Text tabacco").GetComponent<Text>();
+            flavour2Text = rootView.Find("Tabacco 2/Text tabacco").GetComponent<Text>();
+            flavour3Text = rootView.Find("Tabacco 3/Text tabacco").GetComponent<Text>();
             commentsText = rootView.Find("Comments/Text comments").GetComponent<Text>();
         }
     }
 
     public void UpdateItems()
     {
+        Order order = new Order();
+        order = AcceptOrder();
+        for (int i = 0; i < order.getCountZabiv(); i++)
+        {
+            AddZabiv(order.getZabiv(i), order.getComments(), order.getGuestName());
+        }
+    }
+
+    public void AddZabiv(Zabiv zabiv, string comments, string name)
+    {
         countModel += 1;
-        StartCoroutine(GetItems(countModel, results => OnReceivedModels(results)));
+        StartCoroutine(GetItems(countModel, zabiv, comments, name, results => OnReceivedModels(results)));
+    }
+
+    public Order AcceptOrder()
+    {
+        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahservertest.herokuapp.com/order/list");
+        httpWebRequest.ContentType = "";
+        httpWebRequest.Method = "POST";
+        var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
+        using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+        {
+            var result = streamReader.ReadToEnd();
+            print(result);
+            var order = new Order();
+            order = JsonUtility.FromJson<Order>(result);
+            return order;
+        }
     }
 
     void OnReceivedModels(ZabivMasterModel[] models)
@@ -81,6 +179,12 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         
         SetSize(trans, new Vector2(trans.rect.size.x, newSize));
     }
+    
+    public static void AddHeight(RectTransform trans, float newSize) {
+        
+        SetSize(trans, new Vector2(trans.rect.size.x, trans.rect.size.y + newSize));
+    }
+    
 
     void InitializeItemView(GameObject viewGameObject, ZabivMasterModel model)
     {
@@ -90,33 +194,52 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         view.strength1Text.text = model.strength1;
         view.strength2Text.text = model.strength2;
         view.strength3Text.text = model.strength3;
-        view.label1Text.text = model.label1;
-        view.label2Text.text = model.label2;
-        view.label3Text.text = model.label3;
+        view.flavourl1Text.text = model.flavour1;
+        view.flavour2Text.text = model.flavour2;
+        view.flavour3Text.text = model.flavour3;
         view.commentsText.text = model.comments;
-        rect = viewGameObject.transform.Find("Comments/Text comments").GetComponent<RectTransform>();
-        /*float textWidth = LayoutUtility.GetPreferredHeight(view.commentsText.rectTransform);
-        float parentWidth = rect.rect.height;
-        print(textWidth + " " + parentWidth);*/
+        rectTransform = viewGameObject.transform.Find("Comments/Text comments").GetComponent<RectTransform>();
+        float textWidth = LayoutUtility.GetPreferredHeight(view.commentsText.rectTransform);
+        float parentWidth = rectTransform.rect.height;
+        if (textWidth >= parentWidth)
+        {
+            float differance = textWidth - parentWidth;
+            AddHeight(viewGameObject.transform.GetComponent<RectTransform>(), differance); 
+            AddHeight(viewGameObject.transform.Find("Comments").GetComponent<RectTransform>(), differance);
+        }
         
     }
     
 
-    IEnumerator GetItems(int count, System.Action<ZabivMasterModel[]> callback)
+    IEnumerator GetItems(int count, Zabiv zabiv, string comments, string name, System.Action<ZabivMasterModel[]> callback)
     {
         yield return new WaitForSeconds(1f);
         var results = new ZabivMasterModel[count];
         for (int i = 0; i < count; i++)
         {
+            
             results[i] = new ZabivMasterModel();
-            results[i].guest = "Гость Nikita";
-            results[i].strength1 = "14%";
-            results[i].strength2 = "52%";
-            results[i].strength3 = "34%";
-            results[i].label1 = "Какой-то табак";
-            results[i].label2 = "Какой-то табак";
-            results[i].label3 = "Какой-то табак";
-            results[i].comments = "Без комментариев";
+            results[i].guest = name;
+
+            if (zabiv.getFlavour1() != null)
+            {
+                results[i].strength1 = zabiv.getFlavour1().getStrength().ToString() + "%";
+                results[i].flavour1 = zabiv.getFlavour1().getFlavour();
+            }
+
+            if (zabiv.getFlavour2() != null)
+            {
+                results[i].strength2 = zabiv.getFlavour2().getStrength().ToString() + "%";
+                results[i].flavour2 = zabiv.getFlavour2().getFlavour();
+            }
+            
+            if (zabiv.getFlavour3() != null)
+            {
+                results[i].strength3 = zabiv.getFlavour3().getStrength().ToString() + "%";
+                results[i].flavour3 = zabiv.getFlavour3().getFlavour();
+            }
+            
+            results[i].comments = comments;
         }
 
         callback(results);

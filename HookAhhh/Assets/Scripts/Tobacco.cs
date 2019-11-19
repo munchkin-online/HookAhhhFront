@@ -3,33 +3,55 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 [XmlType("Tobacco")]
 public class Tobacco
 {
-    [XmlAttribute("Label")]
-    public string Label { get; set; }
-    [XmlAttribute("Strength")]
-    public int Strength { get; set; }
-    [XmlAttribute("Category")]
-    public string Category { get; set;  }
-    [XmlAttribute("Flavor")]
-    public string Flavor { get; set; }
+    [SerializeField] 
+    [XmlAttribute("Id")]
+    public int Id;
+    
+    [SerializeField] 
+    [XmlAttribute("label")]
+    public string label;
+
+    [SerializeField] 
+    [XmlAttribute("strength")]
+    public int strength;
+
+    [SerializeField] 
+    [XmlAttribute("category")]
+    public string category;
+    
+    [SerializeField] 
+    [XmlAttribute("flavour")]
+    public string flavour;
 
     public Tobacco() {}
 
-    public Tobacco(string label, int strength, string category, string flavor)
+    public Tobacco(string label, int strength, string category, string flavour)
     {
-        Label = label;
-        Strength = strength;
-        Category = category;
-        Flavor = flavor;
+        this.label = label;
+        this.strength = strength;
+        this.category = category;
+        this.flavour = flavour;
+    }
+    
+    public string getFlavour()
+    {
+        return flavour;
+    }
+
+    public int getStrength()
+    {
+        return strength;
     }
     
     //Category: 
 //    Миксы - Mixes
-//    Мятные - Mint
+//    Свежие - Fresh
 //    Напитки - Drinks
 //    Пряные - Spicy
 //    Сладости - Sweets
@@ -37,5 +59,6 @@ public class Tobacco
 //    Цветочно-травяные - Floral-herbal
 //    Цитрусовые - Citrus
 //    Ягодные - Berry
+//    Другие - Others
 
 }

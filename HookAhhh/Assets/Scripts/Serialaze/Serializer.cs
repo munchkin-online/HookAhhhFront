@@ -15,8 +15,11 @@ public class Serializer
       {
          case "tobaccos":
             Type[] extraTypes= { typeof(Tobacco)};
-            XmlSerializer serializer = new XmlSerializer(typeof(TobaccoState), extraTypes); 
-
+            XmlSerializer serializer = new XmlSerializer(typeof(TobaccoState), extraTypes);
+            if(File.Exists(DataPathTobaccos))
+            {
+               File.Delete(DataPathTobaccos);
+            }
             FileStream fs = new FileStream(DataPathTobaccos, FileMode.Create); 
             serializer.Serialize(fs, state); 
             fs.Close();
