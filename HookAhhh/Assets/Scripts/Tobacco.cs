@@ -48,6 +48,11 @@ public class Tobacco
     {
         return strength;
     }
+
+    public int getId()
+    {
+        return Id;
+    }
     
     //Category: 
 //    Миксы - Mixes
