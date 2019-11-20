@@ -71,7 +71,7 @@ public class ScrollViewAdapterMaster : MonoBehaviour
                          else
                          {   //Свайп вниз
                              Debug.Log("Down Swipe");
-                             UpdateItems();
+                             AcceptOrders();
                          }
                     }
                 } 
@@ -121,11 +121,26 @@ public class ScrollViewAdapterMaster : MonoBehaviour
             commentsText = rootView.Find("Comments/Text comments").GetComponent<Text>();
         }
     }
-
-    public void UpdateItems()
+    [System.Serializable]
+    public class Orders
     {
-        Order order = new Order();
-        order = AcceptOrder();
+        [SerializeField]
+        public List<Order> orders;
+
+        public static Orders CreateFromJSON(string jsonString)
+        {
+            return JsonUtility.FromJson<Orders>(jsonString);
+        }
+
+        public Orders()
+        {
+            orders = new List<Order>();
+        }
+    }
+    
+
+    public void AddOrder(Order order)
+    {
         for (int i = 0; i < order.getCountZabiv(); i++)
         {
             AddZabiv(order.getZabiv(i), order.getComments(), order.getGuestName());
@@ -138,19 +153,22 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         StartCoroutine(GetItems(countModel, zabiv, comments, name, results => OnReceivedModels(results)));
     }
 
-    public Order AcceptOrder()
+    public void AcceptOrders()
     {
-        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahservertest.herokuapp.com/order/list");
+        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahserver.herokuapp.com/order/list");
         httpWebRequest.ContentType = "";
         httpWebRequest.Method = "POST";
         var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
         using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
         {
             var result = streamReader.ReadToEnd();
+            result = "{\"orders\":" + result + "}";
             print(result);
-            var order = new Order();
-            order = JsonUtility.FromJson<Order>(result);
-            return order;
+            var answer = Orders.CreateFromJSON(result).orders;
+            foreach (var order in answer)
+            {
+                AddOrder(order);
+            }
         }
     }
 
@@ -213,7 +231,7 @@ public class ScrollViewAdapterMaster : MonoBehaviour
 
     IEnumerator GetItems(int count, Zabiv zabiv, string comments, string name, System.Action<ZabivMasterModel[]> callback)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0f);
         var results = new ZabivMasterModel[count];
         for (int i = 0; i < count; i++)
         {
