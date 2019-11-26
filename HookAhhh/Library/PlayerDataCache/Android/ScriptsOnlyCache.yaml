@@ -4,14 +4,13 @@ ScriptsOnlyBuild:
     - Blocked
     - CreateTobaccoListAfterInit1
     - InitScript
-    - MasterGoToBlocking
-    - MasterGoToOrders
     - OnBackPrs
     - OpenGuest
     - OpenRegDialog
     - Registration
     - ScrollViewAdapter
     - ScrollViewAdapterMaster
+    - ViewOrderWindow
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -23,6 +22,8 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.TextEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -249,15 +250,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10014}
     - Class: 114
-      Script: {instanceID: 10066}
-    - Class: 114
       Script: {instanceID: 10200}
     - Class: 114
       Script: {instanceID: 10296}
     - Class: 114
       Script: {instanceID: 10478}
-    - Class: 114
-      Script: {instanceID: 10542}
     - Class: 114
       Script: {instanceID: 10680}
     - Class: 114
@@ -272,6 +269,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11538}
     - Class: 114
       Script: {instanceID: 11540}
+    - Class: 114
+      Script: {instanceID: 14902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -421,12 +420,6 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: b30a7a632d92e5e2173d5ac7008834e7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MasterGoToOrders
-  - hash:
-      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -545,12 +538,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
-  - hash:
-      serializedVersion: 2
-      Hash: b30a7a632d92e5e2173d5ac7008834e7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MasterGoToBlocking
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -821,6 +808,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 824c9fa6dd37cb0a33c73266111a2e20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ViewOrderWindow
   platform: 13
   scenePathNames:
   - Assets/Scenes/Authorization.unity

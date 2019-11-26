@@ -66,8 +66,6 @@
     <Compile Include="Assets\Scripts\CreateTobaccoListAfterInit1.cs" />
     <Compile Include="Assets\Scripts\EasyHookah.cs" />
     <Compile Include="Assets\Scripts\InitScript.cs" />
-    <Compile Include="Assets\Scripts\MasterGoToBlocking.cs" />
-    <Compile Include="Assets\Scripts\MasterGoToOrders.cs" />
     <Compile Include="Assets\Scripts\OnBackPrs.cs" />
     <Compile Include="Assets\Scripts\OpenGuest.cs" />
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
@@ -81,6 +79,7 @@
     <Compile Include="Assets\Scripts\Serialaze\TobaccoState.cs" />
     <Compile Include="Assets\Scripts\Tobacco.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
+    <Compile Include="Assets\Scripts\ViewOrderWindow.cs" />
     <Compile Include="Assets\Scripts\Zabiv.cs" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\readme.txt" />
     <None Include="Assets\CP\GUIdo\Flat\Fonts\license.txt" />
