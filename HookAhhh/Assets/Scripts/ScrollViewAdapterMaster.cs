@@ -21,7 +21,7 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     private List<Vector3> touchPositions = new List<Vector3>(); //Храним все позиции касания в списке
     
     void Start(){
-        dragDistance = Screen.height*20/100; //dragDistance это 20% высоты экрана
+        dragDistance = Screen.height*30/100; //dragDistance это 30% высоты экрана
     }
     
     void Update(){
@@ -70,7 +70,7 @@ public class ScrollViewAdapterMaster : MonoBehaviour
                          }
                          else
                          {   //Свайп вниз
-                             Debug.Log("Down Swipe");
+                             Debug.Log("Down Swipe " + lp.y);
                              AcceptOrders();
                          }
                     }
@@ -163,7 +163,6 @@ public class ScrollViewAdapterMaster : MonoBehaviour
         {
             var result = streamReader.ReadToEnd();
             result = "{\"orders\":" + result + "}";
-            print(result);
             var answer = Orders.CreateFromJSON(result).orders;
             foreach (var order in answer)
             {
@@ -208,13 +207,17 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     {
         
         ZabivMasterView view = new ZabivMasterView(viewGameObject.transform);
-        view.guestText.text = model.guest;
+        view.guestText.text = "Гость " + model.guest;
         view.strength1Text.text = model.strength1;
         view.strength2Text.text = model.strength2;
         view.strength3Text.text = model.strength3;
         view.flavourl1Text.text = model.flavour1;
         view.flavour2Text.text = model.flavour2;
         view.flavour3Text.text = model.flavour3;
+        if (model.comments == null)
+        {
+            view.commentsText.text = "Без комментариев";
+        }
         view.commentsText.text = model.comments;
         rectTransform = viewGameObject.transform.Find("Comments/Text comments").GetComponent<RectTransform>();
         float textWidth = LayoutUtility.GetPreferredHeight(view.commentsText.rectTransform);

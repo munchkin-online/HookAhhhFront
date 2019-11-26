@@ -28,8 +28,6 @@
           <e p="CreateTobaccoListAfterInit1.cs" t="Include" />
           <e p="EasyHookah.cs" t="Include" />
           <e p="InitScript.cs" t="Include" />
-          <e p="MasterGoToBlocking.cs" t="Include" />
-          <e p="MasterGoToOrders.cs" t="Include" />
           <e p="OnBackPrs.cs" t="Include" />
           <e p="OpenGuest.cs" t="Include" />
           <e p="OpenRegDialog.cs" t="Include" />
@@ -45,6 +43,7 @@
           </e>
           <e p="Tobacco.cs" t="Include" />
           <e p="User.cs" t="Include" />
+          <e p="ViewOrderWindow.cs" t="Include" />
           <e p="Zabiv.cs" t="Include" />
         </e>
         <e p="tobaccos.xml" t="Include" />
