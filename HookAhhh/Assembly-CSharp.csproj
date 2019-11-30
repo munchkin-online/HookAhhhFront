@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\RoundRectGraphic.cs" />
     <Compile Include="Assets\Scripts\ScrollViewAdapter.cs" />
     <Compile Include="Assets\Scripts\ScrollViewAdapterMaster.cs" />
+    <Compile Include="Assets\Scripts\SendingOrderOnServerScrpt.cs" />
     <Compile Include="Assets\Scripts\Serialaze\ExampleSerializer.cs" />
     <Compile Include="Assets\Scripts\Serialaze\Serializer.cs" />
     <Compile Include="Assets\Scripts\Serialaze\TobaccoState.cs" />
