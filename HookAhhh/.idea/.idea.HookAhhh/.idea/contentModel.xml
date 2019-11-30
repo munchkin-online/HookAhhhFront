@@ -36,6 +36,7 @@
           <e p="RoundRectGraphic.cs" t="Include" />
           <e p="ScrollViewAdapter.cs" t="Include" />
           <e p="ScrollViewAdapterMaster.cs" t="Include" />
+          <e p="SendingOrderOnServerScrpt.cs" t="Include" />
           <e p="Serialaze" t="Include">
             <e p="ExampleSerializer.cs" t="Include" />
             <e p="Serializer.cs" t="Include" />
