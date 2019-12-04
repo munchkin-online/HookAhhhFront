@@ -611,9 +611,10 @@ GameObject:
   - component: {fileID: 6141295835703386886}
   - component: {fileID: 6141295835703386885}
   - component: {fileID: 5380588073327893965}
+  - component: {fileID: 3918732950962057871}
   m_Layer: 5
   m_Name: Zabiv
-  m_TagString: Untagged
+  m_TagString: ElementOfContent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,6 +702,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!65 &3918732950962057871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141295835703386891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1020, y: 414, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6201442227992447044
 GameObject:
   m_ObjectHideFlags: 0
