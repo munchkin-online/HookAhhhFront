@@ -13,6 +13,7 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     public RectTransform content;
     public int countModel = 0;
     private RectTransform rectTransform;
+    private List<Order> orders = new List<Order>();
     
     
     private Vector3 fp;   //Первая позиция касания
@@ -141,16 +142,13 @@ public class ScrollViewAdapterMaster : MonoBehaviour
 
     public void AddOrder(Order order)
     {
-        for (int i = 0; i < order.getCountZabiv(); i++)
+        if (order.getCountZabiv() > 0)
         {
-            AddZabiv(order.getZabiv(i), order.getComments(), order.getGuestName());
+            print(orders.Count + " " + order.getCountZabiv());
+            orders.Add(order);
+            countModel += order.getCountZabiv();
+            StartCoroutine(GetItems(countModel, results => OnReceivedModels(results)));   
         }
-    }
-
-    public void AddZabiv(Zabiv zabiv, string comments, string name)
-    {
-        countModel += 1;
-        StartCoroutine(GetItems(countModel, zabiv, comments, name, results => OnReceivedModels(results)));
     }
 
     public void AcceptOrders()
@@ -232,35 +230,57 @@ public class ScrollViewAdapterMaster : MonoBehaviour
     }
     
 
-    IEnumerator GetItems(int count, Zabiv zabiv, string comments, string name, System.Action<ZabivMasterModel[]> callback)
+    IEnumerator GetItems(int count, System.Action<ZabivMasterModel[]> callback)
     {
         yield return new WaitForSeconds(0f);
         var results = new ZabivMasterModel[count];
         for (int i = 0; i < count; i++)
         {
-            
+            int sum = 0;
+            int j = 0;
+            int n = 0;
+            while (sum + orders[n].getCountZabiv() - 1 < i)
+            {
+                sum += orders[n].getCountZabiv();
+                n++;
+            }
+
+            j = i - sum;
+            /*foreach (var VARIABLE in orders)
+            {
+                if (sum + VARIABLE.getCountZabiv() - 1 >= i)
+                {
+                    j = i - sum;
+                }
+                else
+                {
+                    n++;
+                    sum += VARIABLE.getCountZabiv();
+                }
+            }*/
+            print(i + " " + n + " " + j);
             results[i] = new ZabivMasterModel();
-            results[i].guest = name;
+            results[i].guest = orders[n].getGuestName();
 
-            if (zabiv.getFlavour1() != null)
+            if (orders[n].getZabiv(j).getFlavour1() != null)
             {
-                results[i].strength1 = zabiv.getFlavour1().getStrength().ToString() + "%";
-                results[i].flavour1 = zabiv.getFlavour1().getFlavour();
+                results[i].strength1 = orders[n].getZabiv(j).getFlavour1().getStrength().ToString() + "%";
+                results[i].flavour1 = orders[n].getZabiv(j).getFlavour1().getFlavour();
             }
 
-            if (zabiv.getFlavour2() != null)
+            if (orders[n].getZabiv(j).getFlavour2() != null)
             {
-                results[i].strength2 = zabiv.getFlavour2().getStrength().ToString() + "%";
-                results[i].flavour2 = zabiv.getFlavour2().getFlavour();
+                results[i].strength2 = orders[n].getZabiv(j).getFlavour2().getStrength().ToString() + "%";
+                results[i].flavour2 = orders[n].getZabiv(j).getFlavour2().getFlavour();
             }
             
-            if (zabiv.getFlavour3() != null)
+            if (orders[n].getZabiv(j).getFlavour3() != null)
             {
-                results[i].strength3 = zabiv.getFlavour3().getStrength().ToString() + "%";
-                results[i].flavour3 = zabiv.getFlavour3().getFlavour();
+                results[i].strength3 = orders[n].getZabiv(j).getFlavour3().getStrength().ToString() + "%";
+                results[i].flavour3 = orders[n].getZabiv(j).getFlavour3().getFlavour();
             }
             
-            results[i].comments = comments;
+            results[i].comments = orders[n].getComments();
         }
 
         callback(results);

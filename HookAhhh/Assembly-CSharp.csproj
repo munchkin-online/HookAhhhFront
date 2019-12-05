@@ -62,11 +62,14 @@
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\ColorizeText.cs" />
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\ColorizeTextInChildren.cs" />
     <Compile Include="Assets\CP\GUIdo\Flat\Scripts\Demo.cs" />
+    <Compile Include="Assets\Scripts\AddOrderOnBasket.cs" />
     <Compile Include="Assets\Scripts\Blocked.cs" />
     <Compile Include="Assets\Scripts\CreateTobaccoListAfterInit1.cs" />
     <Compile Include="Assets\Scripts\EasyHookah.cs" />
     <Compile Include="Assets\Scripts\InitScript.cs" />
+    <Compile Include="Assets\Scripts\ListOrderOnBasket.cs" />
     <Compile Include="Assets\Scripts\OnBackPrs.cs" />
+    <Compile Include="Assets\Scripts\OpenBasket.cs" />
     <Compile Include="Assets\Scripts\OpenGuest.cs" />
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
     <Compile Include="Assets\Scripts\Order.cs" />
@@ -87,37 +90,37 @@
     <None Include="Assets\CP\GUIdo\Flat\Fonts\license.txt" />
     <None Include="Assets\tobaccos.xml" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/MyProgram/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Aver/Documents/GitHub/HookAhhhFront/HookAhhh/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

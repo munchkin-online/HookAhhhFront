@@ -26,42 +26,11 @@ public class ScrollContentBasket : MonoBehaviour
     
     void Start()
     {
-        getRequest();
-        getRequest();
+        countModel += ListOrderOnBasket.order.getCountZabiv();
+        StartCoroutine(GetItems(countModel, results => OnReceivedModels(results)));
     }
 
-    private void getRequest()
-    {
-        var httpWebRequest = (HttpWebRequest) WebRequest.Create("https://hookahserver.herokuapp.com/order/list");
-        httpWebRequest.ContentType = "";
-        httpWebRequest.Method = "POST";
-        var httpResponse = (HttpWebResponse) httpWebRequest.GetResponse();
-        using(var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-        {
-            var result = streamReader.ReadToEnd();
-            result = "{\"orders\":" + result + "}";
-            var answer = Orders.CreateFromJSON(result).orders;
-            foreach (var order in answer)
-            {
-                AddOrder(order);
-            }
-        }
-    }
-    public class Orders
-    {
-        [SerializeField]
-        public List<Order> orders;
-
-        public static Orders CreateFromJSON(string jsonString)
-        {
-            return JsonUtility.FromJson<Orders>(jsonString);
-        }
-
-        public Orders()
-        {
-            orders = new List<Order>();
-        }
-    }
+    
     private void Update()
     {
         if(Input.GetKeyDown("mouse 0"))
@@ -131,14 +100,7 @@ public class ScrollContentBasket : MonoBehaviour
             commentsText = rootView.Find("Comments/Text comments").GetComponent<Text>();
         }
     }
-    public void AddOrder(Order order)
-    {
-        this.order = order;
-        for (int i = 0; i < order.getCountZabiv(); i++)
-        {
-            AddZabiv(order.getZabiv(i), order.getComments(), order.getGuestName());
-        }
-    }
+    
 
     public void SendingOrderOnServer()
     {
@@ -150,7 +112,7 @@ public class ScrollContentBasket : MonoBehaviour
             httpWebRequest.Method = "POST";
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-                string json = JsonUtility.ToJson(order);
+                string json = JsonUtility.ToJson(ListOrderOnBasket.order);
 
                 streamWriter.Write(json);
             }
@@ -163,12 +125,7 @@ public class ScrollContentBasket : MonoBehaviour
             }
         }
     }
-    public void AddZabiv(Zabiv zabiv, string comments, string name)
-    {
-        countModel += 1;
-        StartCoroutine(GetItems(countModel, zabiv, comments, name, results => OnReceivedModels(results)));
-    }
-    
+
 
     void OnReceivedModels(ZabivMasterModel[] models)
     {
@@ -231,35 +188,34 @@ public class ScrollContentBasket : MonoBehaviour
     }
     
 
-    IEnumerator GetItems(int count, Zabiv zabiv, string comments, string name, System.Action<ZabivMasterModel[]> callback)
+    IEnumerator GetItems(int count, System.Action<ZabivMasterModel[]> callback)
     {
         yield return new WaitForSeconds(0f);
         var results = new ZabivMasterModel[count];
         for (int i = 0; i < count; i++)
         {
-            
             results[i] = new ZabivMasterModel();
-            results[i].guest = name;
+            results[i].guest = ListOrderOnBasket.order.getGuestName();
 
-            if (zabiv.getFlavour1() != null)
+            if (ListOrderOnBasket.order.getZabiv(i).getFlavour1() != null)
             {
-                results[i].strength1 = zabiv.getFlavour1().getStrength().ToString() + "%";
-                results[i].flavour1 = zabiv.getFlavour1().getFlavour();
+                results[i].strength1 = ListOrderOnBasket.order.getZabiv(i).getFlavour1().getStrength().ToString() + "%";
+                results[i].flavour1 = ListOrderOnBasket.order.getZabiv(i).getFlavour1().getFlavour();
             }
 
-            if (zabiv.getFlavour2() != null)
+            if (ListOrderOnBasket.order.getZabiv(i).getFlavour2() != null)
             {
-                results[i].strength2 = zabiv.getFlavour2().getStrength().ToString() + "%";
-                results[i].flavour2 = zabiv.getFlavour2().getFlavour();
+                results[i].strength2 = ListOrderOnBasket.order.getZabiv(i).getFlavour2().getStrength().ToString() + "%";
+                results[i].flavour2 = ListOrderOnBasket.order.getZabiv(i).getFlavour2().getFlavour();
             }
             
-            if (zabiv.getFlavour3() != null)
+            if (ListOrderOnBasket.order.getZabiv(i).getFlavour3() != null)
             {
-                results[i].strength3 = zabiv.getFlavour3().getStrength().ToString() + "%";
-                results[i].flavour3 = zabiv.getFlavour3().getFlavour();
+                results[i].strength3 = ListOrderOnBasket.order.getZabiv(i).getFlavour3().getStrength().ToString() + "%";
+                results[i].flavour3 = ListOrderOnBasket.order.getZabiv(i).getFlavour3().getFlavour();
             }
             
-            results[i].comments = comments;
+            results[i].comments = ListOrderOnBasket.order.getComments();
         }
         callback(results);
     }

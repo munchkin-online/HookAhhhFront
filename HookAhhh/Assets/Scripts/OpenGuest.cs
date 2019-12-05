@@ -72,6 +72,8 @@ public class OpenGuest : MonoBehaviour
             user = answer.user;
             print(result);
 
+            ListOrderOnBasket.userName = user.username;
+
             switch(user.role)
             {
                 case "new":

@@ -22,9 +22,16 @@ public class Order
         order = new List<Zabiv>();
     }
 
-    public void addElementToOrder(Zabiv zabiv, string comments)
+    public void addElementToOrder(Zabiv zabiv, string guestName, string comments)
     {
+        this.guestName = guestName;
         this.comments = comments;
+        order.Add(zabiv);
+        cost += 1200;
+    }
+    
+    public void addElementToOrder(Zabiv zabiv)
+    {
         order.Add(zabiv);
         cost += 1200;
     }
