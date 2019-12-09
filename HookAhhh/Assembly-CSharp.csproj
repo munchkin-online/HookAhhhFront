@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\OpenRegDialog.cs" />
     <Compile Include="Assets\Scripts\Order.cs" />
     <Compile Include="Assets\Scripts\Registration.cs" />
+    <Compile Include="Assets\Scripts\RemoveOrderOnBasket.cs" />
     <Compile Include="Assets\Scripts\RoundRectGraphic.cs" />
     <Compile Include="Assets\Scripts\ScrollContentBasket.cs" />
     <Compile Include="Assets\Scripts\ScrollViewAdapter.cs" />

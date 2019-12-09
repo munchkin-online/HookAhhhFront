@@ -49,6 +49,13 @@ public class ScrollContentBasket : MonoBehaviour
         }
     }
 
+    public void RemoveOrder(int i)
+    {
+        ListOrderOnBasket.order.removeElementForId(i);
+        countModel -= 1;
+        StartCoroutine(GetItems(countModel, results => OnReceivedModels(results)));
+    }
+
     public void change()
     {
         if(canChange == false)
@@ -65,6 +72,7 @@ public class ScrollContentBasket : MonoBehaviour
 
     public class ZabivMasterModel
     {
+        public string id;
         public string guest;
         public string strength1;
         public string strength2;
@@ -77,6 +85,7 @@ public class ScrollContentBasket : MonoBehaviour
     
     public class ZabivMasterView
     {
+        public Text idText;
         public Text guestText;
         public Text strength1Text;
         public Text strength2Text;
@@ -90,6 +99,7 @@ public class ScrollContentBasket : MonoBehaviour
 
         public ZabivMasterView(Transform rootView)
         {
+            idText = rootView.Find("Id").GetComponent<Text>();
             guestText = rootView.Find("Text guest").GetComponent<Text>();
             strength1Text = rootView.Find("Tabacco 1/Text percent").GetComponent<Text>();
             strength2Text = rootView.Find("Tabacco 2/Text percent").GetComponent<Text>();
@@ -163,6 +173,7 @@ public class ScrollContentBasket : MonoBehaviour
     {
         
         ZabivMasterView view = new ZabivMasterView(viewGameObject.transform);
+        view.idText.text = model.id;
         view.guestText.text = "Гость " + model.guest;
         view.strength1Text.text = model.strength1;
         view.strength2Text.text = model.strength2;
@@ -195,6 +206,7 @@ public class ScrollContentBasket : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             results[i] = new ZabivMasterModel();
+            results[i].id = i.ToString();
             results[i].guest = ListOrderOnBasket.order.getGuestName();
 
             if (ListOrderOnBasket.order.getZabiv(i).getFlavour1() != null)

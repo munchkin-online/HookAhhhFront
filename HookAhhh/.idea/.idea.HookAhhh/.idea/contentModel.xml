@@ -36,6 +36,7 @@
           <e p="OpenRegDialog.cs" t="Include" />
           <e p="Order.cs" t="Include" />
           <e p="Registration.cs" t="Include" />
+          <e p="RemoveOrderOnBasket.cs" t="Include" />
           <e p="RoundRectGraphic.cs" t="Include" />
           <e p="ScrollContentBasket.cs" t="Include" />
           <e p="ScrollViewAdapter.cs" t="Include" />

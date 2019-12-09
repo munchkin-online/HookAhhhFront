@@ -40,6 +40,12 @@ public class Order
     {
         order.Remove(zabiv);
     }
+    
+    public void removeElementForId(int i)
+    {
+        order.Remove(order[i]);
+    }
+    
 
     public string getComments()
     {
